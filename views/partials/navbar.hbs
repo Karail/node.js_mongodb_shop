@@ -1,0 +1,46 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Приложение курсов</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      <li class={{#if isHome}}'active'{{/if}}>
+        <a href="/">Главная</a>
+      </li>
+
+      <li class={{#if isCourses}}'active'{{/if}}>
+        <a href="/courses">Курсы</a>
+      </li>
+
+      {{#if isAuth}}
+      <li class={{#if isAdd}}'active'{{/if}}>
+        <a href="/add">Добавить курс</a>
+      </li>
+
+      <li class={{#if isCart}}'active'{{/if}}>
+        <a href="/cart">Корзина</a>
+      </li>
+
+      <li class={{#if isOrder}}'active'{{/if}}>
+        <a href="/orders">Заказы</a>
+      </li>
+      
+      <li class={{#if isProfile}}'active'{{/if}}>
+        <a href="/profile/">Профиль</a>
+      </li>
+
+      <li>
+        <a href="/auth/logout">Выход</a>
+      </li>
+
+
+      {{else}}
+      <li class={{#if isLogin}}'active'{{/if}}>
+        <a href="/auth/login">Войти</a>
+      </li>
+      {{/if}}
+
+
+
+    </ul>
+  </div>
+</nav>
